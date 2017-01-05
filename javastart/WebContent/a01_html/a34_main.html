@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script>
+	function login() {
+		var idVal = document.frm.id.value;
+		if(confirm(idVal+"님 로그인 합니다.")){
+			parent.top01.document.body.innerHTML="<h1 align='right'>"+idVal+"님 로그인중</h1>";
+		}
+		parent.top01.document.body.innerHTML = "<h1 align='left'>" + idVal
+				+ "님 로그인중 </h1>";
+	}
+</script>
+</head>
+<body bgColor="#66ffff">
+	<h1 align="center">login</h1>
+	<center>
+		<form name="frm">
+			ID: <input type="text" name="id" /><br /> <input type="button"
+				value="로그인" onclick="login()" />
+		</form>
+</body>
+</html>
