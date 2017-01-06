@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script>
+    function cal(){
+        var numL = document.gesan.leftNum.value;
+        var numR = document.gesan.rightNum.value;
+        var tot =0;
+        
+   if(document.gesan.sachick.value == puls){
+	   numL "+" numR = (numL+numR);
+   }
+    
+    }
+    </script>
+</head>
+<body bgcolor="aqua">
+<form name="gesan" align="center">
+	<input type="text" name="leftNum" />
+	
+	<select name="sachick" id="sa">
+		<option value="+">+</option>
+		<option value="-">-</option>
+		<option value="*">*</option>
+		<option value="/">/</option>
+	</select>
+	
+	<input type="text" name="rightNum" />
+	<input type="button" value="계산" onclick="cal()"/>
+</form>
+</body>
+</html>
