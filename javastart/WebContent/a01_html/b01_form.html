@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script>
+	function call() {
+		//form 안에서 데이터를 쓰는 이유는 서버단에 데이터를 보내기 위해서..
+		//name의 이름으로 서버에 보내지기 때문에.
+		//document.form이름.name.속성
+		var input01Val = document.frm.input01.value;
+		// 		alert(input01Val);
+		document.getElementById("inputId").value;
+		// 		alert(input01IdVal);
+		var sel01Val = document.frm.sel01.value;
+		alert(sel01Val);
+	}
+</script>
+</head>
+<body>
+	<form name="frm">
+		<!-- 서버에 넘길 데이터는 form사이에 반드시 존재.. -->
+		이름: <input type="text" name="input01" id="inputId" /><br /> <input
+			type="button" value="클릭" onclick="javascript:call();" /> <select
+			name="sel01" id="">
+			<option value="ch1">선택1</option>
+			<option value="ch2">선택2</option>
+		</select><br />
+
+	</form>
+</body>
+</html>

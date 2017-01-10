@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script>
+window.onload=function(){
+	
+	var show="<table border='1'>";
+	for (var idx = 0; idx < dailyPlans.length; idx++) {
+		show+="<tr>";
+		show+="<td>"+(idx+1)+"</td>";
+		show+="<td>"+dailyPlans[idx].time+"</td>";
+		show+="<td>"+dailyPlans[idx].memo+"</td>";
+		show+="<td>"+dailyPlans[idx].important+"</td>";
+		show+="<td>"+dailyPlans[idx].cost+"</td>";
+		show+="<td>"+dailyPlans[idx].minuts+"</td>";
+		show+="<td>"+dailyPlans[idx-1].getTotCost()+dailyPlans[idx].getTotCost()+"</td>";
+		show+="<td>"+dailyPlans[idx].getTotTime()+"</td>";
+		show+="</tr>";
+		if(idx-1==-1){
+			return 0;
+		}
+	}
+		document.getElementById("aa").innerHTML=show;
+};
+
+//   확인 예제
+//   1단계
+//   dailyPlans: 배열객체
+//    plan : 단위객체
+//     속성값: 시간, 일정내용, 중요도, 비용
+//         나의 하루 일과
+//     no 	시간 	 	일정내용 	중요도  	비용 	시간(분) < 누적비용 	누적시간>
+//     1 	6:00 	기상 		1 		0 	10 
+//     ..
+//     5  	7:00 	버스 		2 	 	1200 40
+//     ..
+//     20  23:00   일기및정리  1 		0 	20
+//     2단계
+//     plan 속성값 비용누적합산(함수처리), 시간누적합산(함수처리)
+var dailyPlans = [];
+dailyPlans.push({time:6,memo:"기상",important:1,cost:0,minuts:10});
+dailyPlans.push({time:7,memo:"버스",important:2,cost:1200,minuts:40});
+dailyPlans.push({time:11,memo:"일기및정리",important:1,cost:0,minuts:20});
+dailyPlans.push({time:12,memo:"취침",important:3,cost:3600,minuts:10});
+
+
+
+for (var idx in dailyPlans) {
+	dailyPlans[idx].getTotCost=function(){
+		
+		return this.cost;
+		};
+	dailyPlans[idx].getTotTime=function(){
+		return this.time;
+	};
+	
+};
+
+</script>
+</head>
+<body>
+	<table>
+		<tr>
+			<th>no</th>
+			<th>시간</th>
+			<th>일정내용</th>
+			<th>중요도</th>
+			<th>비용</th>
+			<th>시간</th>
+		</tr>
+	</table>
+	<h6 id="aa"></h6>
+</body>
+</html>

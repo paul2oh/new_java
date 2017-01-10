@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script>
+	window.onload = function() {
+		
+		var nums = function ();
+		for(i=0;i<8;i++){
+			nums[i]=parseInt(Math.random()*9);
+			
+		}
+		
+		console.log(nums[0]);
+		
+	};
+// 	function sumAll() {
+// 		//  	alert(arguments+":"+arguments.length);
+// 		var sum = 0;
+// 		for (var idx = 0; idx < arguments.length; idx++) {
+// 			sum += arguments[idx];
+// 		}
+// 		document.getElementsByTagName("h1")[0].innerHTML = "합계:" + sum;
+// 	}
+	
+	/*
+	1단계
+	 덧셈..
+	 1+5(합산해주세요) click
+	 ==> 1+5 =6 출력..
+	 2단계 : arguments 활용
+	  화면 로딩시마다 임의의 0~9사이 데이터가 로딩되어..
+	  no  	문제  	정답
+	  1 	2+5 	클릭시, 정답출력
+	  2 	3-6 	
+	  3 	4*7 	
+	  4 	7/5 	
+	*/
+//  	function sum1(){
+//  		 var sums=0;
+//  		 sums = arguments[0]+arguments[1];
+// 		 document.getElementsByTagName("h1")[0].innerHTML = "합계:" + sums;
+//  	 };
+
+	function clickNo1(){
+		var sums=0;
+		
+	};
+</script>
+</head>
+<body>
+<!-- 	<h1 align="center" onclick="sumAll(1,2,3,4,5)">1~5 합산</h1> -->
+<!-- <h1 align="center" onclick="sum1(1,5)"> 1+5(합산해주세요)  </h1> -->
+
+<table>
+<tr>
+	<th>no</th>
+	<th>문제</th>
+	<th>정답</th>
+</tr>
+<tr id="no1" onclick="clickNo1()">
+	<td >1</td>
+	<td >arguments[0]+arguments[1]</td>
+	<td >정답:</td>
+	
+</tr>
+<tr id="no2"onclick="clickNo2()">
+	<td >2</td>
+	<td >arguments[2]-arguments[3]</td>
+	<td >정답:</td>
+</tr>
+<tr id="no3" onclick="clickNo3()">
+	<td >3</td>
+	<td >arguments[4]*arguments[5]</td>
+	<td >정답:</td>
+</tr>
+<tr id="no4" onclick="clickNo4()">
+	<td >4</td>
+	<td >arguments[6]/arguments[7]</td>
+	<td >정답:</td>
+</tr>
+
+</table>
+
+</body>
+</html>

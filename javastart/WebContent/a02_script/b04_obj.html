@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script>
+	var show = "";
+	var student = {
+		name : "홍길동",
+		kor : 92,
+		math : 80,
+		eng : 70
+	};
+	//  alert(student.name+":" +("name" in student));
+	//  alert(student.kor+":" +("kor" in student));
+	//  alert(student.math+":" +("math" in student));
+	//  alert(student.eng+":" +("eng" in student));
+	//  객체의 속성값 한번에 가져올때..
+	//  with(객체)
+	
+	with(student){
+		show+=name+",";
+		show+=kor+",";
+		show+=math+",";
+		show+=eng+",";
+		
+	}
+// 	alert(show);
+	for(var pro in student){
+		alert(pro+":"+student[pro]);
+		
+	}
+
+
+	
+</script>
+</head>
+<body>
+
+</body>
+</html>

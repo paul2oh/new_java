@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+<script>
+window.onload=function(){
+	
+
+//배열..
+var array=[];
+array[0]="하이1";
+array[1]="하이2";
+//push 메서드 활용. 데이터를 자동 index하면서 입력할때.
+for(var idx=0;idx<5;idx++){
+	array.push("안녕!"+idx);
+}
+// alert(array);
+// 배열 객체 Array
+var array1= Array();
+var array2=Array(10,20,30);
+var array3=Array("HI","Gut","Tag");
+array3.push("Ich");
+// alert(array1);
+// alert(array2);
+// alert(array3);
+// 		1단계
+//   prompt 창으로 3개의 색상을 입력받아서..
+//  	배열로 만든 후,
+//  	body부분에 출력한다.
+//  	ex)
+//  	빨 파 노
+//  	2단계
+//  	테이블에 3개셀을 만든 후,
+// 		해당 내용에 입력되게 처리..
+var color1 = prompt("색상을 입력하세요","");
+var color2 = prompt("색상을 입력하세요","");
+var color3 = prompt("색상을 입력하세요","");
+var array4 = Array(color1,color2,color3);
+
+alert(array4);
+
+document.body.innerHTML = "<table border='1'><tr><td>"+color1+"</td><td>"+color2+"</td><td>"+color3+"</td></tr></table>"
+};
+function kk(){
+var inputColor = document.getElementById("colors");
+
+
+};
+
+
+</script>
+<h1 id="colors" onclick="kk()">colors</h1>
+
+<!-- 2단계 -->
+
+
+</body>
+</html>

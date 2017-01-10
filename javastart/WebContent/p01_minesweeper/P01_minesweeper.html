@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html>
+ 
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script>
+//초급 9*9 지뢰 10개
+//중급 16*16 40개
+//상급 30*16 99개
+ 
+	var bb = document.getElementById("1");
+ 
+	window.onload = function() {
+		var x = 9;
+		var y = 9;
+		var arrays = new Array();
+		// 		arrays[0] = new Array(9);
+		// 		arrays[1] = new Array(9);
+		// 		arrays[2] = new Array(9);
+		// 		arrays[3] = new Array(9);
+		// 		arrays[4] = new Array(9);
+		// 		arrays[5] = new Array(9);
+		// 		arrays[6] = new Array(9);
+		// 		arrays[7] = new Array(9);
+		// 		arrays[8] = new Array(9);
+ 
+		for (var i = 0; i < x; i++) {
+			arrays[i] = new Array();
+			for (var j = 0; j < y; j++) {
+				arrays[i][j] = 0;
+ 
+				console.log(arrays[0][0]);
+			}
+		}
+ 
+		console.log("aa", arrays[0][2]);
+		
+ 
+	}//window.onload
+	//초급 level
+	function beginer() {
+		var x=9;
+		var y=9;
+		var bomb=10;
+		var randomBombX = parseInt(Math.random()*9);
+		var randomBombY = parseInt(Math.random()*9);
+		
+		var arrays = new Array();
+		for (var i = 0; i < x; i++) {
+			arrays[i] = new Array();
+			for (var j = 0; j < y;j++) {
+				if(j !=8 ){
+				arrays[i][j] = 0;
+				document.body.innerHTML += "<input type='button' id='arrays[i][j]' onclick='searchMine()'/>"
+				}	
+				else{document.body.innerHTML += "<input type='button' id='arrays[i][j]' onclick='searchMine()'/>"+"<br />"}
+			
+			}
+		}
+		console.log("x",randomBombX);
+		console.log("y",randomBombX);
+		
+ 		
+		for(var i=0;i<10;i++){
+			var setBomb =document.getElementById("array[randomBombX][randomBombY]");
+			setBomb.innerHTML ="B";
+			
+		}
+		
+		
+	}//beginer
+ 
+	function func(obj) {
+ 
+		// if(event.button !=2){
+		// 	return;
+		// }
+ 
+	}
+</script>
+</head>
+ 
+<body>
+	<input type="button" value="초급" onclick="beginer()" />
+	<br />
+ 
+	<!-- map -->
+<!-- 	<div> -->
+<!-- 		<input id="1" type="button" value="" onclick="func(this)" /><input -->
+<!-- 			id="2" type="button" value="" onclick="func(this)" /><input id="3" -->
+<!-- 			type="button" value="" onclick="func(this)" /><input id="4" -->
+<!-- 			type="button" value="" onclick="func(this)" /><input id="5" -->
+<!-- 			type="button" value="" onclick="func(this)" /><input id="6" -->
+<!-- 			type="button" value="" onclick="func(this)" /><input id="7" -->
+<!-- 			type="button" value="" onclick="func(this)" /><input id="8" -->
+<!-- 			type="button" value="" onclick="func(this)" /><input id="9" -->
+<!-- 			type="button" value="" onclick="func(this)" /> -->
+<!-- 	</div> -->
+<!-- 	<div> -->
+<!-- 		<input id="10" type="button" value="" onclick="func(this)" /><input -->
+<!-- 			id="11" type="button" value="" onclick="func(this)" /><input id="12" -->
+<!-- 			type="button" value="" onclick="func(this)" /><input id="13" -->
+<!-- 			type="button" value="" onclick="func(this)" /><input id="14" -->
+<!-- 			type="button" value="" onclick="func(this)" /><input id="15" -->
+<!-- 			type="button" value="" onclick="func(this)" /><input id="16" -->
+<!-- 			type="button" value="" onclick="func(this)" /><input id="17" -->
+<!-- 			type="button" value="" onclick="func(this)" /><input id="18" -->
+<!-- 			type="button" value="" onclick="func(this)" /> -->
+<!-- 	</div> -->
+<!-- 	<div> -->
+<!-- 		<input id="19" type="button" value="" onclick="func(this)" /><input -->
+<!-- 			id="20" type="button" value="" onclick="func(this)" /><input id="21" -->
+<!-- 			type="button" value="" onclick="func(this)" /><input id="22" -->
+<!-- 			type="button" value="" onclick="func(this)" /><input id="23" -->
+<!-- 			type="button" value="" onclick="func(this)" /><input id="24" -->
+<!-- 			type="button" value="" onclick="func(this)" /><input id="25" -->
+<!-- 			type="button" value="" onclick="func(this)" /><input id="26" -->
+<!-- 			type="button" value="" onclick="func(this)" /><input id="27" -->
+<!-- 			type="button" value="" onclick="func(this)" /> -->
+<!-- 	</div> -->
+<!-- 	<div> -->
+<!-- 		<input id="28" type="button" value="" onclick="func(this)" /><input -->
+<!-- 			id="29" type="button" value="" onclick="func(this)" /><input id="30" -->
+<!-- 			type="button" value="" onclick="func(this)" /><input id="31" -->
+<!-- 			type="button" value="" onclick="func(this)" /><input id="32" -->
+<!-- 			type="button" value="" onclick="func(this)" /><input id="33" -->
+<!-- 			type="button" value="" onclick="func(this)" /><input id="34" -->
+<!-- 			type="button" value="" onclick="func(this)" /><input id="35" -->
+<!-- 			type="button" value="" onclick="func(this)" /><input id="36" -->
+<!-- 			type="button" value="" onclick="func(this)" /> -->
+<!-- 	</div> -->
+<!-- 	<div> -->
+<!-- 		<input id="37" type="button" value="" onclick="func(this)" /><input -->
+<!-- 			id="38" type="button" value="" onclick="func(this)" /><input id="39" -->
+<!-- 			type="button" value="" onclick="func(this)" /><input id="40" -->
+<!-- 			type="button" value="" onclick="func(this)" /><input id="41" -->
+<!-- 			type="button" value="" onclick="func(this)" /><input id="42" -->
+<!-- 			type="button" value="" onclick="func(this)" /><input id="43" -->
+<!-- 			type="button" value="" onclick="func(this)" /><input id="44" -->
+<!-- 			type="button" value="" onclick="func(this)" /><input id="45" -->
+<!-- 			type="button" value="" onclick="func(this)" /> -->
+<!-- 	</div> -->
+<!-- 	<div> -->
+<!-- 		<input id="46" type="button" value="" onclick="func(this)" /><input -->
+<!-- 			id="47" type="button" value="" onclick="func(this)" /><input id="48" -->
+<!-- 			type="button" value="" onclick="func(this)" /><input id="49" -->
+<!-- 			type="button" value="" onclick="func(this)" /><input id="50" -->
+<!-- 			type="button" value="" onclick="func(this)" /><input id="51" -->
+<!-- 			type="button" value="" onclick="func(this)" /><input id="52" -->
+<!-- 			type="button" value="" onclick="func(this)" /><input id="53" -->
+<!-- 			type="button" value="" onclick="func(this)" /><input id="54" -->
+<!-- 			type="button" value="" onclick="func(this)" /> -->
+<!-- 	</div> -->
+<!-- 	<div> -->
+<!-- 		<input id="55" type="button" value="" onclick="func(this)" /><input -->
+<!-- 			id="56" type="button" value="" onclick="func(this)" /><input id="57" -->
+<!-- 			type="button" value="" onclick="func(this)" /><input id="58" -->
+<!-- 			type="button" value="" onclick="func(this)" /><input id="59" -->
+<!-- 			type="button" value="" onclick="func(this)" /><input id="60" -->
+<!-- 			type="button" value="" onclick="func(this)" /><input id="61" -->
+<!-- 			type="button" value="" onclick="func(this)" /><input id="62" -->
+<!-- 			type="button" value="" onclick="func(this)" /><input id="63" -->
+<!-- 			type="button" value="" onclick="func(this)" /> -->
+<!-- 	</div> -->
+<!-- 	<div> -->
+<!-- 		<input id="64" type="button" value="" onclick="func(this)" /><input -->
+<!-- 			id="65" type="button" value="" onclick="func(this)" /><input id="66" -->
+<!-- 			type="button" value="" onclick="func(this)" /><input id="67" -->
+<!-- 			type="button" value="" onclick="func(this)" /><input id="68" -->
+<!-- 			type="button" value="" onclick="func(this)" /><input id="69" -->
+<!-- 			type="button" value="" onclick="func(this)" /><input id="70" -->
+<!-- 			type="button" value="" onclick="func(this)" /><input id="71" -->
+<!-- 			type="button" value="" onclick="func(this)" /><input id="72" -->
+<!-- 			type="button" value="" onclick="func(this)" /> -->
+<!-- 	</div> -->
+<!-- 	<div> -->
+<!-- 		<input id="73" type="button" value="" onclick="func(this)" /><input -->
+<!-- 			id="74" type="button" value="" onclick="func(this)" /><input id="75" -->
+<!-- 			type="button" value="" onclick="func(this)" /><input id="76" -->
+<!-- 			type="button" value="" onclick="func(this)" /><input id="77" -->
+<!-- 			type="button" value="" onclick="func(this)" /><input id="78" -->
+<!-- 			type="button" value="" onclick="func(this)" /><input id="79" -->
+<!-- 			type="button" value="" onclick="func(this)" /><input id="80" -->
+<!-- 			type="button" value="" onclick="func(this)" /><input id="81" -->
+<!-- 			type="button" value="" onclick="func(this)" /> -->
+<!-- 	</div> -->
+ 
+ 
+ 
+ 
+ 
+</body>
+ 
+</html>
